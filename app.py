@@ -234,12 +234,12 @@ def main() -> None:
             st.session_state[key] = st.session_state[key]
 
     api_key, model = render_sidebar()
-    st.markdown(render.topbar_html(), unsafe_allow_html=True)
     result = st.session_state.get("result")
     if result:
+        st.markdown(render.topbar_html(), unsafe_allow_html=True)
         render_results(result)
     else:
-        render_input(api_key, model)
+        render_input(api_key, model)  # the hero carries the logotype
 
 
 main()
