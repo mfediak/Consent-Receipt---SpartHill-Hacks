@@ -1,7 +1,24 @@
-We collect your name, email address, device identifiers, and browsing activity.
+Lumora Privacy Policy (fictional example for demonstration)
 
-We use this information to provide services, personalize advertisements, and improve our products. We may share certain information with advertising partners.
+Last updated: January 1, 2026
 
-You may request access to or deletion of your personal information by contacting privacy@example.com.
+1. Information we collect
+When you create an account, we collect your name, email address, and password. When you use Lumora, we automatically collect your device type, IP address, approximate location, and how you interact with the app. If you connect a calendar, we also collect event titles and times.
 
-We retain your information for as long as necessary to provide our services.
+2. How we use information
+We use your information to provide and improve our services, personalize content, send product updates, and measure how features are used. We may also use your information to develop new products and for other business purposes.
+
+3. Sharing
+We do not sell your personal information. We may share certain information with advertising partners and analytics providers to help us understand and promote our services. We may disclose information to government authorities if we believe disclosure is reasonably necessary.
+
+4. Your choices
+You can update your account details in Settings at any time. You may request a copy of your data or ask us to delete your account by emailing privacy@lumora.example. We will respond within a reasonable time.
+
+5. Retention
+We retain your information for as long as necessary to provide our services and for other legitimate business purposes.
+
+6. Children
+Lumora is not intended for children under 13.
+
+7. Changes
+We may update this policy from time to time. Continued use of Lumora means you accept the updated policy.
