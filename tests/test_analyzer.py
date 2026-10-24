@@ -34,6 +34,26 @@ def test_provider_setting_cannot_enable_non_groq_backends(monkeypatch):
     assert a.active_providers() == ["groq"]
 
 
+def test_generate_sends_groq_bearer_token(monkeypatch):
+    monkeypatch.setenv("GROQ_API_KEY", "test-key")
+    requests = []
+
+    class Response:
+        status_code = 200
+
+        def json(self):
+            return {"choices": [{"message": {"content": "{}"}}]}
+
+    def fake_post(url, *, json, headers, timeout):
+        requests.append((url, headers))
+        return Response()
+
+    monkeypatch.setattr(a.httpx, "post", fake_post)
+
+    assert a._generate("groq", "test-model", "prompt") == "{}"
+    assert requests[0][1]["Authorization"] == "Bearer test-key"
+
+
 def test_retries_groq_when_rate_limited(monkeypatch):
     monkeypatch.setenv("GROQ_API_KEY", "k")
     calls = []
