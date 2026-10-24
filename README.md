@@ -8,7 +8,16 @@ Paste a privacy policy or upload a searchable PDF, Word `.docx`, or UTF-8 text f
 
 ---
 
-## Step-by-step setup (Windows + VS Code)
+## Local setup (Windows + VS Code)
+
+## Deploy on Vercel
+
+1. Push this project to a GitHub repository, then import that repository at <https://vercel.com/new>.
+2. Keep the project root set to the folder containing `requirements.txt`. Vercel detects the FastAPI app in `app/main.py`; no frontend build command is needed.
+3. In the Vercel project, open **Settings > Environment Variables** and add `GROQ_API_KEY` with your Groq API key. Optionally add `GROQ_MODEL` (the default is `openai/gpt-oss-20b`). Select the environments where each variable should be available.
+4. Deploy (or redeploy after adding/changing environment variables). Check `https://<your-project>.vercel.app/api/health`; it should list `groq` when the key is configured.
+
+Keep `.env` local. Do not commit or upload API keys; configure them in Vercel instead. `vercel.json` gives the Python function up to 60 seconds and includes the sample policy file it reads at runtime.
 
 ### 1. Prerequisites
 Python 3.10 or newer (`python --version`) and Chrome, Edge, or Safari.
@@ -38,7 +47,7 @@ python -m pip install -r requirements.txt
 Copy `.env.example` to a new file named exactly `.env` and paste your Groq key:
 ```
 GROQ_API_KEY=gsk_your_key_here
-GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_MODEL=openai/gpt-oss-20b
 ```
 No quotes, no spaces around the key.
 
