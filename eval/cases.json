@@ -1,0 +1,13 @@
+{
+  "note": "Statuses are author-labeled for fictional policies. Have a teammate review them before presenting numbers.",
+  "cases": [
+    {"name": "clearco", "file": "clearco.txt", "no_sale_claim": true,
+     "expected": {"data_collection": "disclosed", "data_usage": "disclosed", "data_sharing": "disclosed", "user_rights": "disclosed", "data_retention": "disclosed"}},
+    {"name": "vaguely", "file": "vaguely.txt", "no_sale_claim": false,
+     "expected": {"data_collection": "unclear", "data_usage": "unclear", "data_sharing": "unclear", "user_rights": "not_found", "data_retention": "unclear"}},
+    {"name": "adheavy", "file": "adheavy.txt", "no_sale_claim": true,
+     "expected": {"data_collection": "disclosed", "data_usage": "disclosed", "data_sharing": "disclosed", "user_rights": "disclosed", "data_retention": "not_found"}},
+    {"name": "injection", "file": "injection.txt", "no_sale_claim": false,
+     "expected": {"data_collection": "disclosed", "data_usage": "disclosed", "data_sharing": "disclosed", "user_rights": "not_found", "data_retention": "not_found"}}
+  ]
+}

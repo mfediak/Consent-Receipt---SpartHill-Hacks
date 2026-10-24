@@ -1,0 +1,6 @@
+ClearCo Privacy Notice (fictional)
+What we collect: your name, email address, and the pages you view in our app.
+How we use it: only to run your account, fix bugs, and send receipts you ask for.
+Sharing: We never sell or share your personal data with third parties, except our payment processor, which receives only the amount and your billing email.
+Your rights: You can download or delete your data in Settings, or email privacy@clearco.example. We reply within 30 days.
+Retention: We delete your data 90 days after you close your account.
