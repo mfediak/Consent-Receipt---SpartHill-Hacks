@@ -3,7 +3,7 @@
   "functions": {
     "app/main.py": {
       "maxDuration": 60,
-      "includeFiles": ["samples/**"]
+      "includeFiles": "samples/**"
     }
   }
 }
