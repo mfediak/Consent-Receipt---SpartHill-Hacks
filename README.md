@@ -1,6 +1,6 @@
 # ConsentReceipt
 
-Paste a privacy policy and get a **consent receipt**: five plain-English disclosures (what's collected, how it's used, who it's shared with, your rights, how long it's kept). Every disclosure is backed by an exact quote that the app **verifies against the original text**, and you can **listen to the summary** read aloud.
+Paste a privacy policy or upload a searchable PDF, Word `.docx`, or UTF-8 text file and get a **consent receipt**: five plain-English disclosures (what's collected, how it's used, who it's shared with, your rights, how long it's kept). Every disclosure is backed by an exact quote that the app **verifies against the original text**, and you can **listen to the summary** read aloud. Download the finished report as a PDF.
 
 - **AI (free):** Groq
 - **Backend:** Python + FastAPI. **Frontend:** plain HTML/CSS/JS (no build step)
@@ -58,7 +58,11 @@ Open <http://127.0.0.1:8000>. Check <http://127.0.0.1:8000/api/health>: it shoul
 1. Click **Use sample policy**, then **Generate receipt**.
 2. Click **Show in policy** on a card to jump to the highlighted source passage.
 3. Click **Listen to summary** (or **Listen** on one card). Choose a voice and speed.
-4. Click **Download receipt (JSON)**.
+4. Click **Download report (PDF)**.
+
+Results can be translated into Spanish, French, Hindi, Arabic, Simplified Chinese, Portuguese, or German. Translation uses the configured Groq provider and does not translate or alter quoted evidence or the original policy. Speech requests a voice matching the selected language; available voices depend on the browser and operating system.
+
+Uploads are limited to 10 MB and extracted in memory. Scanned PDFs without selectable text need OCR before upload. Legacy Word `.doc` files should be saved as `.docx` first.
 
 ### 10. Tests and evaluation
 ```powershell
